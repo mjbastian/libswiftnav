@@ -32,9 +32,12 @@ typedef struct {
   u8 bit_phase_count;
   s32 nav_bit_integrate;
 
-  u32 frame_words[3][8];
+  u32 frame_words[5][8];
   u8 next_subframe_id;
   u8 inverted;
+  u32 tow;
+  u32 weekno;
+  u8 src_prn;
 } nav_msg_t;
 
 void nav_msg_init(nav_msg_t *n);
